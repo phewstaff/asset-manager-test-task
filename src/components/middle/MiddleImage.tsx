@@ -43,15 +43,19 @@ const MiddleImage: FC<Props> = (props) => {
           <img src={props.item.src} alt="" />
         </div>
       )}
-      <img
-        key={props.item.id}
-        src={props.item.src}
-        alt=""
-        onClick={handleClick}
-        onDragOver={props.onDragOver}
-        onDrop={props.onDrop}
+      <div
         ref={(node) => props.getMap().set(props.item.id, node)}
-      />
+        key={props.item.id}
+        className="middle-image-container"
+      >
+        <img
+          src={props.item.src}
+          alt=""
+          onClick={handleClick}
+          onDragOver={props.onDragOver}
+          onDrop={props.onDrop}
+        />
+      </div>
     </>
   );
 };

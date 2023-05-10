@@ -4,10 +4,17 @@
   background-color: rgb(239, 237, 239);
   width: 60vw;
   padding: 1rem;
+  height: 100vw;
 }
 
 .app-container {
+  overflow-y: hidden;
   min-height: 50vh;
-
+  height: 100%;
   border: 1px solid rgb(206, 206, 206);
+}
+
+body {
+  @media screen and (max-width: 768px) {
+  }
 }

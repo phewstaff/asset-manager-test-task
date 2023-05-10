@@ -76,7 +76,7 @@ const Middle: FC<Props> = (props) => {
             ]);
           }
         }}
-        className="middle-image-container"
+        className="middle-swiper-container"
       >
         {props.middleImages.map((item) => {
           return (

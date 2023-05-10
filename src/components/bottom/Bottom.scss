@@ -46,6 +46,7 @@
     .extend {
       margin-left: auto;
     }
+
     button {
       border-radius: 5px;
       width: 6rem;
@@ -57,6 +58,7 @@
       font-family: inherit;
       font-weight: 500;
       transition: 0.15s;
+
       &:hover {
         background-color: #1e214e;
         color: white;
@@ -70,6 +72,7 @@
     flex-wrap: wrap;
     gap: 5px;
   }
+
   input {
     width: 100%;
     font-size: 1rem;
@@ -79,6 +82,7 @@
       outline: none;
     }
   }
+
   img {
     object-fit: contain;
     width: 32%;
@@ -89,9 +93,6 @@
       overflow-y: auto;
       height: 90vh;
       margin-top: 5vh;
-    }
-    .functional-buttons-container {
-      padding: 0 20rem;
     }
   }
 }
