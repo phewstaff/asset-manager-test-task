@@ -57,7 +57,7 @@ const Gallery: FC<Props> = (props: Props) => {
             src={dataUrl}
             alt="uploaded image"
             draggable={true}
-            onDragStart={(event) => {
+            onDragStart={() => {
               props.setDraggedImageUrl(dataUrl);
             }}
           />

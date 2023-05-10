@@ -1,10 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import building from "../../assets/building.png";
 import { v4 as uuidv4 } from "uuid";
 
-type Props = {};
-
-const Templates: FC = (props: Props) => {
+const Templates: FC = () => {
   const images = [
     building,
     building,

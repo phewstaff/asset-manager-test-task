@@ -1,10 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import dog from "../../assets/Hotpot.png";
 import { v4 as uuidv4 } from "uuid";
 
-type Props = {};
-
-const Background: FC = (props: Props) => {
+const Background: FC = () => {
   const images = [dog, dog, dog, dog, dog, dog];
 
   return (

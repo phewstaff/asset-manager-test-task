@@ -2,9 +2,7 @@ import { FC, useState } from "react";
 import book from "../../assets/book-outline.svg";
 import "./Top.scss";
 
-type Props = {};
-
-const Top: FC<Props> = (props: Props) => {
+const Top: FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [addedToCart, setAddedToCart] = useState(false);
 

@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, useRef } from "react";
 import back from "../../assets/back-outline.svg";
 import forward from "../../assets/forward-outline.svg";
 import "./Middle.scss";
