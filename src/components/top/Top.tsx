@@ -5,7 +5,6 @@ import Modal from "./Modal";
 
 const Top: FC = () => {
   const [showModal, setShowModal] = useState(false);
-  const [addedToCart, setAddedToCart] = useState(false);
 
   const closeModal = () => {
     setShowModal(false);
@@ -22,7 +21,6 @@ const Top: FC = () => {
         <button
           onClick={() => {
             setShowModal(true);
-            setAddedToCart(true);
           }}
         >
           В корзину
