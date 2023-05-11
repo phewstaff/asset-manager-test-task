@@ -105,7 +105,8 @@
     }
 
     .categories-container {
-      height: 10rem;
+      height: 13rem;
+      flex-grow: 5;
 
       .categories-img {
         height: 100%;
@@ -116,5 +117,4 @@
 
 input {
   color: transparent;
-  margin: 0 50%;
 }
