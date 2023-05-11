@@ -32,6 +32,8 @@ body {
         overflow: hidden;
         height: 80%;
         min-height: 5rem;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
 
         .middle-image-container {
           min-width: 100%;

@@ -5,6 +5,8 @@ import Background from "./Background";
 import "./Bottom.scss";
 
 type Props = {
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+
   imagesLength: number;
   setDraggedImageUrl: React.Dispatch<React.SetStateAction<string | null>>;
   setMiddleImages: React.Dispatch<
@@ -54,7 +56,14 @@ const Bottom: FC<Props> = (props: Props) => {
         </div>
 
         <div className="functional-buttons-container">
-          <button onClick={() => props.setMiddleImages([])}>Delete</button>
+          <button
+            onClick={() => {
+              props.setMiddleImages([]);
+              props.setCurrentIndex(0);
+            }}
+          >
+            Delete
+          </button>
 
           <button>Select</button>
 

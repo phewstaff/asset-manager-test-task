@@ -37,6 +37,7 @@ const App: FC = () => {
           />
 
           <Bottom
+            setCurrentIndex={setCurrentIndex}
             setDraggedImageUrl={setDraggedImageUrl}
             setMiddleImages={setMiddleImages}
             imagesLength={imagesLength}
