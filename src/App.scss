@@ -19,6 +19,15 @@ body {
     .app-wrapper {
       width: 35vw;
     }
+
+    .middle {
+      .image-modal {
+        img {
+          min-height: 90%;
+          min-width: 90%;
+        }
+      }
+    }
   }
 }
 
@@ -32,8 +41,6 @@ body {
         overflow: hidden;
         height: 80%;
         min-height: 5rem;
-        overflow: scroll;
-        -webkit-overflow-scrolling: touch;
 
         .middle-image-container {
           min-width: 100%;
@@ -50,8 +57,9 @@ body {
 
     .app-wrapper {
       width: 100vw;
-      overflow: hidden;
       padding: 0;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
 
       .image-modal {
         img {

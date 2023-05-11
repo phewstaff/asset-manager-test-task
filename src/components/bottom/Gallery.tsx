@@ -39,31 +39,36 @@ const Gallery: FC<Props> = (props: Props) => {
   };
 
   return (
-    <>
-      <input type="file" accept="image/*" onChange={handleFileInputChange} />
+    <section className="categories-container">
+      <div>
+        <input type="file" accept="image/*" onChange={handleFileInputChange} />
+      </div>
+
       <>
         {galleryImages.map((dataUrl) => (
-          <img
-            onClick={() =>
-              props.setMiddleImages((prevState) => [
-                ...prevState,
-                {
-                  src: dataUrl,
-                  id: props.imagesLength + 1,
-                },
-              ])
-            }
-            key={dataUrl}
-            src={dataUrl}
-            alt="uploaded image"
-            draggable={true}
-            onDragStart={() => {
-              props.setDraggedImageUrl(dataUrl);
-            }}
-          />
+          <div className="categories-img">
+            <img
+              onClick={() =>
+                props.setMiddleImages((prevState) => [
+                  ...prevState,
+                  {
+                    src: dataUrl,
+                    id: props.imagesLength + 1,
+                  },
+                ])
+              }
+              key={dataUrl}
+              src={dataUrl}
+              alt="uploaded image"
+              draggable={true}
+              onDragStart={() => {
+                props.setDraggedImageUrl(dataUrl);
+              }}
+            />
+          </div>
         ))}
       </>
-    </>
+    </section>
   );
 };
 

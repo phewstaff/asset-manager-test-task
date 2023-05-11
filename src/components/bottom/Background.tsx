@@ -20,28 +20,32 @@ const Background: FC<Props> = (props) => {
 
   return (
     <>
-      {images.map((item) => {
-        return (
-          <img
-            src={item}
-            alt=""
-            key={uuidv4()}
-            onClick={() =>
-              props.setMiddleImages((prevState) => [
-                ...prevState,
-                {
-                  src: item,
-                  id: props.imagesLength + 1,
-                },
-              ])
-            }
-            draggable={true}
-            onDragStart={() => {
-              props.setDraggedImageUrl(item);
-            }}
-          />
-        );
-      })}
+      <section className="categories-container">
+        {images.map((item) => {
+          return (
+            <div className="categories-img">
+              <img
+                src={item}
+                alt=""
+                key={uuidv4()}
+                onClick={() =>
+                  props.setMiddleImages((prevState) => [
+                    ...prevState,
+                    {
+                      src: item,
+                      id: props.imagesLength + 1,
+                    },
+                  ])
+                }
+                draggable={true}
+                onDragStart={() => {
+                  props.setDraggedImageUrl(item);
+                }}
+              />
+            </div>
+          );
+        })}
+      </section>
     </>
   );
 };
