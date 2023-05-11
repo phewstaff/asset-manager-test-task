@@ -91,6 +91,8 @@
   &.extended {
     .bottom-images-container {
       overflow-y: auto;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
       height: 90vh;
       margin-top: 5vh;
     }

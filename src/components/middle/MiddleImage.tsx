@@ -39,7 +39,7 @@ const MiddleImage: FC<Props> = (props) => {
   return (
     <>
       {showModal && (
-        <div className="modal" onClick={handleCloseModal}>
+        <div className="image-modal" onClick={handleCloseModal}>
           <img src={props.item.src} alt="" />
         </div>
       )}

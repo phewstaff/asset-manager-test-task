@@ -6,7 +6,6 @@ import MiddleImage from "./MiddleImage";
 
 type Props = {
   draggedImageUrl: string | null;
-
   currentIndex: number;
   currentImage: {
     src: string;
@@ -91,11 +90,11 @@ const Middle: FC<Props> = (props) => {
                   { src: props.draggedImageUrl!, id: prevState.length + 1 },
                 ]);
               }}
+              getMap={getMap}
               setDraggedImageUrl={props.setDraggedImageUrl}
               draggedImageUrl={props.draggedImageUrl}
               setMiddleImages={props.setMiddleImages}
               item={item}
-              getMap={getMap}
               key={item.id}
             />
           );
@@ -113,7 +112,10 @@ const Middle: FC<Props> = (props) => {
           }}
         />
 
-        <p>страница {props.currentIndex + 1}</p>
+        <p>
+          страница
+          {props.middleImages.length > 0 ? ` ${props.currentIndex + 1}` : " 0"} 
+        </p>
 
         <img
           src={forward}

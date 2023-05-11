@@ -24,10 +24,38 @@ body {
 
 body {
   @media screen and (max-width: 435px) {
+    .middle {
+      .middle-swiper-container {
+        margin: auto;
+        display: flex;
+        width: 80%;
+        overflow: hidden;
+        height: 80%;
+        min-height: 5rem;
+
+        .middle-image-container {
+          min-width: 100%;
+          min-height: 100%;
+
+          img {
+            object-fit: cover;
+            height: 15rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+
     .app-wrapper {
       width: 100vw;
       overflow: hidden;
       padding: 0;
+
+      .image-modal {
+        img {
+          max-width: 98%;
+        }
+      }
     }
   }
 }

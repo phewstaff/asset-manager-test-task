@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import book from "../../assets/book-outline.svg";
 import "./Top.scss";
+import Modal from "./Modal";
 
 const Top: FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -38,15 +39,7 @@ const Top: FC = () => {
         <img src={book} alt="" />
       </div>
 
-      {showModal && (
-        <div className="modal">
-          <button className="close-button" onClick={closeModal}>
-            X
-          </button>
-          <p>{addedToCart ? "Product successfully added to the cart" : ""}</p>
-          <button onClick={closeModal}>Go to Cart</button>
-        </div>
-      )}
+      {showModal && <Modal onClose={closeModal} />}
     </section>
   );
 };
