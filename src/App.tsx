@@ -24,6 +24,7 @@ const App: FC = () => {
       <div className="app-wrapper">
         <div className="app-container">
           <Top />
+
           <Middle
             setMiddleImages={setMiddleImages}
             draggedImageUrl={draggedImageUrl}
@@ -34,6 +35,7 @@ const App: FC = () => {
             setCurrentIndex={setCurrentIndex}
             middleImages={middleImages}
           />
+
           <Bottom
             setDraggedImageUrl={setDraggedImageUrl}
             setMiddleImages={setMiddleImages}

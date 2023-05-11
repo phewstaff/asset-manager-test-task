@@ -42,19 +42,20 @@ const Bottom: FC<Props> = (props: Props) => {
     <>
       <section className={`bottom ${isExtended ? "extended" : ""}`}>
         <div className="nav-section">
-          <button onFocus={() => handleOnFocus(true, false, false)}>
+          <button onClick={() => handleOnFocus(true, false, false)}>
             Галерея
           </button>
 
-          <button onFocus={() => handleOnFocus(false, true, false)}>
+          <button onClick={() => handleOnFocus(false, true, false)}>
             Шаблоны
           </button>
 
-          <button onFocus={() => handleOnFocus(false, false, true)}>Фон</button>
+          <button onClick={() => handleOnFocus(false, false, true)}>Фон</button>
         </div>
 
         <div className="functional-buttons-container">
           <button onClick={() => props.setMiddleImages([])}>Delete</button>
+
           <button>Select</button>
 
           <button className="extend" onClick={toggleExtend}>
@@ -70,9 +71,17 @@ const Bottom: FC<Props> = (props: Props) => {
               setMiddleImages={props.setMiddleImages}
             />
           ) : templatesOpen ? (
-            <Templates />
+            <Templates
+              setDraggedImageUrl={props.setDraggedImageUrl}
+              imagesLength={props.imagesLength}
+              setMiddleImages={props.setMiddleImages}
+            />
           ) : backgroundOpen ? (
-            <Background />
+            <Background
+              setDraggedImageUrl={props.setDraggedImageUrl}
+              imagesLength={props.imagesLength}
+              setMiddleImages={props.setMiddleImages}
+            />
           ) : (
             <></>
           )}
